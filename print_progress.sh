@@ -39,6 +39,11 @@ max=$2
 min=$3
 cur=1
 
+if [[ "$#" -eq 0 ]];then
+    echo "$(basename $0) - print progress."
+    echo -e "Usage: \v$(basename $0) progress [max [min]]"
+fi
+
 if [[ -n "$min" ]];then
     cur=$min
 fi
